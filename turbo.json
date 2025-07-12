@@ -3,7 +3,17 @@
     "tasks": {
       "build": {
         "dependsOn": ["^build"],
-        "outputs": [".next/**", "!.next/cache/**"]
+        "outputs": [".next/**", "!.next/cache/**"],
+        "env": [
+          "DATABASE_URL",
+          "BETTER_AUTH_URL",
+          "BETTER_AUTH_SECRET",
+          "GOOGLE_CLIENT_ID",
+          "GOOGLE_CLIENT_SECRET",
+          "NODE_ENV",
+          "UPSTASH_REDIS_REST_URL",
+          "UPSTASH_REDIS_REST_TOKEN"
+        ]
       },
       "check-types": {
         "dependsOn": ["^check-types"]
